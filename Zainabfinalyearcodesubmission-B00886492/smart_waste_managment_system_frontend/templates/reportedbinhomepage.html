@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Smart Bin Monitoring</title>
+    <style>
+        /* Basic styles for the body of the page */
+        body {
+            background-color: #f0f2f5; /* Light gray background color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the font for the entire page */
+            margin: 0; /* Removes default margin */
+            padding: 20px; /* Padding around the content */
+            display: flex; /* Uses flexbox layout */
+            flex-direction: column; /* Arranges children in a column */
+            align-items: center; /* Centers children horizontally */
+            font-size: 16px; /* Base font size */
+        }
+
+        /* Styles for the main heading */
+        h1 {
+            color: #333; /* Dark gray text color */
+            margin: 20px 0 10px; /* Top and bottom margin */
+        }
+
+        /* Styles for buttons */
+        .button {
+            display: inline-block; /* Inline block layout */
+            padding: 10px 20px; /* Padding inside the button */
+            margin: 10px; /* Margin around the button */
+            color: #fff; /* White text color */
+            background-color: green; /* Green background color */
+            text-decoration: none; /* Removes underline */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+        }
+
+        /* Styles for button hover effect */
+        .button:hover {
+            background-color: #0056b3; /* Darker blue when hovering */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect when hovering */
+        }
+
+        /* Styles for the table */
+        table {
+            border-collapse: collapse; /* Collapses table borders */
+            width: 90%; /* Table width is 90% of its container */
+            margin: 20px 0; /* Top and bottom margin */
+            background-color: #fff; /* White background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+        }
+
+        /* Styles for table headers and cells */
+        th, td {
+            padding: 15px; /* Padding inside table cells */
+            text-align: left; /* Left-aligns text in cells */
+            border-bottom: 1px solid #dee2e6; /* Light gray bottom border for separation */
+        }
+
+        /* Styles specifically for table headers */
+        th {
+            background-color: #28a745; /* Green background color for headers */
+            color: #fff; /* White text color */
+        }
+
+        /* Styles for alternating row colors */
+        tr:nth-child(even) {
+            background-color: #f8f9fa; /* Light gray background for even rows */
+        }
+
+        /* Styles for the footer */
+        footer {
+            margin-top: 20px; /* Top margin for spacing */
+            color: #666; /* Dark gray color for footer text */
+            font-size: 12px; /* Smaller font size for footer text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading of the page -->
+    <h1>Smart Bin Monitoring</h1>
+    
+    <!-- Navigation buttons -->
+    <div>
+        <a href="{{ url_for('report') }}" class="button">Report a Problem</a>
+        <a href="{{ url_for('info') }}" class="button">Educative Information</a>
+        <a href="{{ url_for('logout') }}" class="button">Logout</a>
+    </div>
+    
+    <!-- Subheading for the table -->
+    <h2>Reported Bins</h2>
+    
+    <!-- Table displaying reported bin information -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Problem</th>
+            <th>Status</th>
+        </tr>
+        <!-- Loop through each report and create a table row -->
+        {% for report in reports %}
+        <tr>
+            <td>{{ report['_id'] }}</td> <!-- Display report ID -->
+            <td>{{ report['location'] }}</td> <!-- Display location -->
+            <td>{{ report['problem'] }}</td> <!-- Display problem description -->
+            <td>{{ report['status'] }}</td> <!-- Display status -->
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <!-- Footer of the page -->
+    <footer>
+        © 2024 Smart Bin Monitoring. All rights reserved.
+    </footer>
+</body>
+</html>

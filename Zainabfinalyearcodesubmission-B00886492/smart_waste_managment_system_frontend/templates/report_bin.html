@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Report a Problem</title>
+    <style>
+        /* Basic styles for the body of the page */
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+            font-family: Arial, sans-serif; /* Sets the font for the entire page */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            display: flex; /* Uses flexbox layout */
+            flex-direction: column; /* Arranges children in a column */
+            align-items: center; /* Centers children horizontally */
+        }
+
+        /* Styles for the main heading */
+        h1 {
+            color: #343a40; /* Dark gray text color */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Styles for the form container */
+        form {
+            background-color: #fff; /* White background color */
+            padding: 20px; /* Padding inside the form */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+            width: 80%; /* Sets width to 80% of its container */
+            max-width: 600px; /* Maximum width for the form */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Styles for labels */
+        label {
+            display: block; /* Makes labels block elements */
+            margin: 15px 0 5px; /* Margin for spacing above and below */
+            color: #495057; /* Medium gray color for labels */
+        }
+
+        /* Styles for text input and textarea fields */
+        input[type="text"],
+        textarea {
+            width: 100%; /* Full width of the form */
+            padding: 10px; /* Padding inside the input fields */
+            margin-bottom: 15px; /* Bottom margin for spacing */
+            border: 1px solid #ced4da; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Styles for the submit button */
+        button {
+            display: inline-block; /* Inline block layout */
+            padding: 10px 20px; /* Padding inside the button */
+            color: #fff; /* White text color */
+            background-color: #28a745; /* Green background color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        /* Styles for button hover effect */
+        button:hover {
+            background-color: #218838; /* Darker green when hovering */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading of the page -->
+    <h1>Report a Problem</h1>
+    <!-- Report form -->
+    <form action="{{ url_for('report') }}" method="POST">
+        <!-- Location label and input field -->
+        <label for="location">Bin Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <!-- Problem description label and textarea -->
+        <label for="problem">Problem Description:</label>
+        <textarea id="problem" name="problem" required></textarea>
+        
+        <!-- Submit button for the form -->
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Link to navigate back to the homepage -->
+    <a href="{{ url_for('reportedbinhomepage') }}" class="button">Back to Home</a>
+</body>
+</html>

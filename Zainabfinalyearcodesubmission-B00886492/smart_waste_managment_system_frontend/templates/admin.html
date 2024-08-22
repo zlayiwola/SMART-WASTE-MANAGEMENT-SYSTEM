@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>User Admin Dashboard</title>
+    <style>
+        /* General styles for the entire document */
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+            font-family: Arial, sans-serif; /* Font family for the text */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            display: flex; /* Uses flexbox layout */
+            flex-direction: column; /* Arranges children in a column */
+            align-items: center; /* Centers children horizontally */
+        }
+
+        /* Styles for the main heading */
+        h1 {
+            color: #343a40; /* Dark gray text color */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Styles for the table */
+        table {
+            border-collapse: collapse; /* Collapses borders into a single border */
+            width: 80%; /* Sets table width to 80% of the container */
+            margin-top: 20px; /* Top margin */
+            background-color: #fff; /* White background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
+        }
+
+        /* Styles for table header and cells */
+        th, td {
+            padding: 12px; /* Padding inside each cell */
+            text-align: left; /* Left-aligns text */
+            border-bottom: 1px solid #dee2e6; /* Bottom border for each cell */
+        }
+
+        /* Styles specifically for table header cells */
+        th {
+            background-color: #343a40; /* Dark gray background for header */
+            color: #fff; /* White text color */
+        }
+
+        /* Styles for alternating row colors */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray background for even rows */
+        }
+
+        /* Styles for buttons */
+        .button {
+            display: inline-block; /* Inline block layout */
+            padding: 10px 20px; /* Padding around the button text */
+            margin-top: 20px; /* Top margin */
+            color: #fff; /* White text color */
+            background-color: #28a745; /* Green background color */
+            text-decoration: none; /* Removes underline from text */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for background color change */
+        }
+
+        /* Styles for button hover state */
+        .button:hover {
+            background-color: #218838; /* Darker green when hovering */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading of the page -->
+    <h1>User Admin Dashboard</h1>
+    
+    <!-- Flash messages block -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert">{{ message }}</div> <!-- Displays each message -->
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    
+    <!-- Table displaying reports -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Problem</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <!-- Loop through each report and create a table row -->
+        {% for report in reports %}
+        <tr>
+            <td>{{ report['_id'] }}</td> <!-- Display report ID -->
+            <td>{{ report['location'] }}</td> <!-- Display location -->
+            <td>{{ report['problem'] }}</td> <!-- Display problem description -->
+            <td>{{ report.get('status', 'Reported') }}</td> <!-- Display status with a default of "Reported" -->
+            <td>
+                <!-- Form to update the status of the report -->
+                <form action="{{ url_for('update_status', report_id=report['_id']) }}" method="POST">
+                    <select name="status"> <!-- Dropdown for status selection -->
+                        <option value="Reported" {% if report.get('status', 'Reported') == 'Reported' %}selected{% endif %}>Reported</option>
+                        <option value="In Progress" {% if report.get('status', 'Reported') == 'In Progress' %}selected{% endif %}>In Progress</option>
+                        <option value="Resolved" {% if report.get('status', 'Reported') == 'Resolved' %}selected{% endif %}>Resolved</option>
+                    </select>
+                    <!-- Button to submit the form -->
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

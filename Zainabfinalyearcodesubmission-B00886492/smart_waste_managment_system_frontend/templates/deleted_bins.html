@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Deleted Bins Data</title>
+    <style>
+        /* Basic styles for the body of the page */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for the entire document */
+            background-color: #f5f5f5; /* Light gray background color */
+            margin: 0; /* Removes default margin */
+            padding: 20px; /* Padding around the body */
+            color: #333; /* Text color */
+        }
+
+        /* Styles for the page heading */
+        h2 {
+            text-align: center; /* Centers the heading text */
+            color: #34495e; /* Dark gray color for the heading */
+            margin-bottom: 20px; /* Bottom margin for spacing */
+        }
+
+        /* Styles for the table */
+        table {
+            width: 90%; /* Table takes up 90% of the width of its container */
+            margin: 0 auto; /* Centers the table horizontally */
+            border-collapse: collapse; /* Removes spaces between table cells */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow effect */
+            background-color: #fff; /* White background for the table */
+        }
+
+        /* Styles for table headers and cells */
+        th, td {
+            padding: 12px 15px; /* Padding inside table cells */
+            text-align: center; /* Centers text in table cells */
+            border-bottom: 1px solid #ddd; /* Light gray bottom border for separation */
+        }
+
+        /* Additional styles for table headers */
+        th {
+            background-color: #3498db; /* Blue background color for headers */
+            color: white; /* White text color for headers */
+        }
+
+        /* Styles for alternating row colors */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray background for even rows */
+        }
+
+        /* Styles for row hover effect */
+        tr:hover {
+            background-color: #f0f0f0; /* Slightly darker gray when a row is hovered over */
+        }
+
+        /* Styles for the footer */
+        footer {
+            text-align: center; /* Centers footer text */
+            margin-top: 20px; /* Top margin for spacing */
+            font-size: 0.8em; /* Smaller font size for footer text */
+            color: #777; /* Dark gray color for footer text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading of the page -->
+    <h2>Deleted Bins Data</h2>
+    
+    <!-- Table to display the deleted bin data -->
+    <table>
+        <thead>
+            <!-- Table headers -->
+            <tr>
+                <th>Timestamp</th>
+                <th>Bin Level</th>
+                <th>Bin Distance</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Status</th>
+                <th>Deleted At</th>
+            </tr>
+        </thead>
+        <tbody id="deleted-bin-data">
+            <!-- Deleted data will be populated here by JavaScript -->
+        </tbody>
+    </table>
+    
+    <!-- Footer of the page -->
+    <footer>
+        © 2024 Smart Waste Management System. All rights reserved.
+    </footer>
+
+    <script>
+        // Function to fetch deleted bin data from the server
+        async function fetchDeletedBinData() {
+            try {
+                // Fetches data from the API endpoint
+                const response = await fetch('/api/deleted-bins-data');
+                const data = await response.json(); // Converts the response to JSON
+
+                // Selects the table body where the data will be inserted
+                const tableBody = document.getElementById('deleted-bin-data');
+                tableBody.innerHTML = ''; // Clears any existing content in the table body
+
+                // Loops through each item in the data array
+                data.forEach(item => {
+                    // Creates a table row for each item
+                    const row = `
+                        <tr>
+                            <td>${new Date(item.timestamp).toLocaleString()}</td> <!-- Formats and displays timestamp -->
+                            <td>${item.bin_level}</td> <!-- Displays bin level -->
+                            <td>${item.bin_distance}</td> <!-- Displays bin distance -->
+                            <td>${item.latitude}</td> <!-- Displays latitude -->
+                            <td>${item.longitude}</td> <!-- Displays longitude -->
+                            <td>${item.status}</td> <!-- Displays status -->
+                            <td>${new Date(item.deleted_at).toLocaleString()}</td> <!-- Formats and displays deletion time -->
+                        </tr>
+                    `;
+                    // Adds the new row to the table body
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                // Logs an error message if the data fetch fails
+                console.error('Error fetching deleted bin data:', error);
+            }
+        }
+
+        // Calls the function to fetch data when the page loads
+        window.onload = fetchDeletedBinData;
+    </script>
+</body>
+</html>

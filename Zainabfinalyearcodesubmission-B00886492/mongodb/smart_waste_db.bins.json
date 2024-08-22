@@ -1,0 +1,396 @@
+[{
+  "_id": {
+    "$oid": "66b90b2a995b811e77f7f7f9"
+  },
+  "unique_id": "51.4677--0.02394-2024-08-11T19:04:10.044137",
+  "timestamp": "2024-08-11T19:04:10.044137",
+  "bin_level": 87.5,
+  "bin_distance": 3.7,
+  "latitude": 51.4677,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90b48995b811e77f7f7fa"
+  },
+  "unique_id": "51.46787--0.02398-2024-08-11T19:04:40.033210",
+  "timestamp": "2024-08-11T19:04:40.033210",
+  "bin_level": 87.5,
+  "bin_distance": 3.7,
+  "latitude": 51.46787,
+  "longitude": -0.02398,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90b65995b811e77f7f7fb"
+  },
+  "unique_id": "51.46781--0.02398-2024-08-11T19:05:09.916251",
+  "timestamp": "2024-08-11T19:05:09.916251",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46781,
+  "longitude": -0.02398,
+  "status": "resolved"
+},
+{
+  "_id": {
+    "$oid": "66b90b7c995b811e77f7f7fc"
+  },
+  "unique_id": "51.4678--0.02396-2024-08-11T19:05:32.798483",
+  "timestamp": "2024-08-11T19:05:32.798483",
+  "bin_level": 87.5,
+  "bin_distance": 3.8,
+  "latitude": 51.4678,
+  "longitude": -0.02396,
+  "status": "inprogress"
+},
+{
+  "_id": {
+    "$oid": "66b90e7f1550c7e60546571a"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:18:23.107596",
+  "timestamp": "2024-08-11T19:18:23.107596",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90e8d1550c7e60546571b"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:18:37.955957",
+  "timestamp": "2024-08-11T19:18:37.955957",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90e9c1550c7e60546571c"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:18:52.970552",
+  "timestamp": "2024-08-11T19:18:52.970552",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90eab1550c7e60546571d"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:19:07.936889",
+  "timestamp": "2024-08-11T19:19:07.936889",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90eba1550c7e60546571e"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:19:22.963453",
+  "timestamp": "2024-08-11T19:19:22.963453",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90ec91550c7e60546571f"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:19:37.894907",
+  "timestamp": "2024-08-11T19:19:37.894907",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90ed91550c7e605465720"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:19:53.195413",
+  "timestamp": "2024-08-11T19:19:53.195413",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90ee91550c7e605465721"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:20:09.195623",
+  "timestamp": "2024-08-11T19:20:09.195623",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90ef91550c7e605465722"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:20:25.189443",
+  "timestamp": "2024-08-11T19:20:25.189443",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f091550c7e605465723"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:20:41.220467",
+  "timestamp": "2024-08-11T19:20:41.220467",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f191550c7e605465724"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:20:57.207156",
+  "timestamp": "2024-08-11T19:20:57.207156",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f291550c7e605465725"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:21:13.223519",
+  "timestamp": "2024-08-11T19:21:13.223519",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f391550c7e605465726"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:21:29.203460",
+  "timestamp": "2024-08-11T19:21:29.203460",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f491550c7e605465727"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:21:45.220408",
+  "timestamp": "2024-08-11T19:21:45.220408",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f591550c7e605465728"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:22:01.243294",
+  "timestamp": "2024-08-11T19:22:01.243294",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f691550c7e605465729"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:22:17.270931",
+  "timestamp": "2024-08-11T19:22:17.270931",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f781550c7e60546572a"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:22:32.308110",
+  "timestamp": "2024-08-11T19:22:32.308110",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90f871550c7e60546572b"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:22:47.238790",
+  "timestamp": "2024-08-11T19:22:47.238790",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90fa51550c7e60546572c"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:23:17.057525",
+  "timestamp": "2024-08-11T19:23:17.057525",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90fbb1550c7e60546572d"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:23:39.784603",
+  "timestamp": "2024-08-11T19:23:39.784603",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90fcb1550c7e60546572e"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:23:55.006511",
+  "timestamp": "2024-08-11T19:23:55.006511",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b90fd21550c7e60546572f"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:24:02.648513",
+  "timestamp": "2024-08-11T19:24:02.648513",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b910071550c7e605465731"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:24:55.588145",
+  "timestamp": "2024-08-11T19:24:55.588145",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b910181550c7e605465732"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:25:12.176566",
+  "timestamp": "2024-08-11T19:25:12.176566",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b910291550c7e605465733"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:25:29.811069",
+  "timestamp": "2024-08-11T19:25:29.811069",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b916f91550c7e605465734"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:54:33.180050",
+  "timestamp": "2024-08-11T19:54:33.180050",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b917151550c7e605465735"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:55:01.141680",
+  "timestamp": "2024-08-11T19:55:01.141680",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b9176d1550c7e605465736"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:56:29.233173",
+  "timestamp": "2024-08-11T19:56:29.233173",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+},
+{
+  "_id": {
+    "$oid": "66b9177c1550c7e605465737"
+  },
+  "unique_id": "51.46779--0.02394-2024-08-11T19:56:44.835029",
+  "timestamp": "2024-08-11T19:56:44.835029",
+  "bin_level": 87.6,
+  "bin_distance": 3.7,
+  "latitude": 51.46779,
+  "longitude": -0.02394,
+  "status": "reported"
+}]

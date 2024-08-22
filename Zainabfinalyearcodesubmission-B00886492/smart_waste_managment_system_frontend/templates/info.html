@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Smart Waste Management Information</title>
+    <style>
+        /* Basic styles for the body of the page */
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+            font-family: Arial, sans-serif; /* Sets the font for the entire page */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            display: flex; /* Uses flexbox layout */
+            flex-direction: column; /* Arranges children in a column */
+            align-items: center; /* Centers children horizontally */
+        }
+
+        /* Styles for the main heading */
+        h1 {
+            color: #343a40; /* Dark gray text color */
+            margin-top: 20px; /* Top margin */
+        }
+
+        img {
+            height: 500px; /* Maintain the aspect ratio */
+            width: 100%
+          }
+
+        /* Styles for the content container */
+        .content {
+            background-color: #fff; /* White background color */
+            padding: 20px; /* Padding inside the container */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+            width: 80%; /* Sets width to 80% of its container */
+            max-width: 800px; /* Maximum width for the container */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Styles for section headings */
+        h2 {
+            color: #495057; /* Medium gray color for subheadings */
+            margin-top: 20px; /* Top margin */
+        }
+
+        /* Styles for paragraph text */
+        p {
+            color: #495057; /* Medium gray color for text */
+            line-height: 1.6; /* Line height for readability */
+        }
+
+        /* Styles for unordered and ordered lists */
+        ul, ol {
+            color: #495057; /* Medium gray color for list items */
+        }
+
+        /* Styles for links */
+        a {
+            display: inline-block; /* Inline block layout */
+            margin-top: 20px; /* Top margin */
+            color: #28a745; /* Green color for links */
+            text-decoration: none; /* Removes underline */
+        }
+
+        /* Styles for link hover effect */
+        a:hover {
+            text-decoration: underline; /* Underline when hovering */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main heading of the page -->
+    <h1>Smart Waste Management System</h1>
+    <!-- Content container for text and images -->
+    <div class="content">
+        <!-- Placeholder image for visual representation -->
+        <img src="static/images/pexels-markusspiske-3806764.jpg" alt="Smart Waste Management System">
+        <!-- Subheading for the introduction section -->
+        <h2>What is a Smart Waste Management System?</h2>
+        <!-- Paragraph describing the system -->
+        <p>A smart waste management system leverages modern technologies to optimize the process of waste collection, transportation, and disposal. This system integrates various components such as sensors, data analytics, Internet of Things (IoT), and communication technologies to provide a comprehensive and efficient waste management solution.</p>
+        <p>By using sensors placed in waste bins, the system can monitor the fill levels of bins in real-time and transmit this data to a central system. The data collected is then analyzed to determine the optimal collection schedules, routes for waste collection vehicles, and other operational decisions.</p>
+        
+        <!-- Subheading for components section -->
+        <h2>Components of a Smart Waste Management System</h2>
+        <!-- Unordered list describing components -->
+        <ul>
+            <li><strong>Smart Bins:</strong> Equipped with sensors that detect the fill level, weight, and sometimes even the type of waste.</li>
+            <li><strong>Communication Network:</strong> Enables the transmission of data from the bins to the central management system. This can be done through various technologies such as GSM, LoRa, or Wi-Fi.</li>
+            <li><strong>Central Management System:</strong> A software platform that collects data from the bins, analyzes it, and provides actionable insights for waste collection and management.</li>
+            <li><strong>Data Analytics:</strong> Uses the collected data to optimize collection schedules, predict fill levels, and enhance operational efficiency.</li>
+            <li><strong>Mobile Applications:</strong> Allow citizens to interact with the system, report issues, and get notifications about bin statuses and collection schedules.</li>
+        </ul>
+
+        <!-- Subheading for benefits section -->
+        <h2>Benefits of Smart Waste Management</h2>
+        <!-- Unordered list describing benefits -->
+        <ul>
+            <li><strong>Improved Collection Efficiency:</strong> The system ensures that waste is collected only when the bins are full, reducing unnecessary trips and saving fuel.</li>
+            <li><strong>Reduced Operational Costs:</strong> By optimizing collection routes and schedules, municipalities can significantly cut down on labor and transportation costs.</li>
+            <li><strong>Lower Environmental Impact:</strong> Efficient waste collection reduces fuel consumption and emissions, contributing to a cleaner environment.</li>
+            <li><strong>Enhanced Service Quality:</strong> Citizens benefit from cleaner public spaces, timely waste collection, and the ability to report issues and get updates in real-time.</li>
+        </ul>
+
+        <!-- Subheading for reporting section -->
+        <h2>How to Report a Bin Problem</h2>
+        <!-- Instructions for reporting a problem -->
+        <p>If you encounter a problem with a waste bin, such as it being full, damaged, or malfunctioning, you can easily report it through our system. Here’s how:</p>
+        <!-- Ordered list of steps for reporting -->
+        <ol>
+            <li>Go to the <a href="{{ url_for('report') }}">Report a Problem</a> page.</li>
+            <li>Enter the location of the bin that has the issue. Be as specific as possible to help our team locate the bin quickly.</li>
+            <li>Describe the problem in detail. Include any relevant information such as the type of waste, the condition of the bin, or any other observations.</li>
+            <li>Click the "Submit" button to send the report. Our team will review the report and take appropriate action as soon as possible.</li>
+        </ol>
+        <!-- Closing paragraph -->
+        <p>Reporting problems helps us maintain a high standard of service and ensures that waste bins are functional and clean for everyone’s use.</p>
+
+        <!-- Link to navigate back to the homepage -->
+        <a href="{{ url_for('reportedbinhomepage') }}">Back to Home</a>
+    </div>
+</body>
+</html>
